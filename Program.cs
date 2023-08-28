@@ -17,17 +17,20 @@ namespace CarManagement
 
     public class CarManagement
     {
-        private static void RegisterCar()
+        private static object RegisterCar()
         {
             Console.WriteLine("Make: [Car Model]");
             string carMake = Console.ReadLine();
             Console.Clear();
+
             Console.WriteLine("Model: [Car Model]");
             string carModel = Console.ReadLine();
             Console.Clear();
+
             Console.WriteLine("Year: [Car Year]");
             string carYear = Console.ReadLine();
             Console.Clear();
+
             Console.WriteLine("Registration Number: [Registration number]");
             string registrationNumber = Console.ReadLine();
             while (true)
@@ -49,7 +52,8 @@ namespace CarManagement
             Car car = new Car()
             {
                 Make = carMake, Model = carModel, Year = carYear, RegistrationNumber = registrationNumber, OwnerName = ownerName
-        };
+            };
+            return car;
         }
         private static void Main()
         {
@@ -70,10 +74,11 @@ namespace CarManagement
             {
                 case "1":
                     Console.Clear();
-                    RegisterCar();
+                    Car car = (Car)RegisterCar();
+ 
                 break;
 
-                case "2":
+                case "2":   
 
                 break;
             }
