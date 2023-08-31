@@ -3,18 +3,9 @@ using System.ComponentModel.Design;
 using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.Linq;
-
+using MongoDB.Driver;
 namespace CarManagement
 {
-    class Car
-    {
-        public string Make { get; set; }
-        public string Model { get; set; }
-        public string Year { get; set; }
-        public string RegistrationNumber { get; set; }
-        public string OwnerName { get; set; }
-    }
-
     public class CarManagement
     {
         private static object RegisterCar()

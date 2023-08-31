@@ -2,10 +2,11 @@
 using MongoDB.Bson.Serialization.Attributes;
 namespace CarManagement;
 
-public class CarModel
+class Car
 {
-    [BsonId]
-    [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
-    public string Id { get; set; }
-    Car car { get; set; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public string Year { get; set; }
+    public string RegistrationNumber { get; set; }
+    public string OwnerName { get; set; }
 }
